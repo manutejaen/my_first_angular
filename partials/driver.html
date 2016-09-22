@@ -3,6 +3,7 @@
   <nav id="secondary" class="main-nav">
     <div class="driver-picture">
       <div class="avatar">
+        /* The directive ng-show will show the HTML element if the expression provided is true.*/
         <img ng-show="driver" src="img/drivers/{{driver.Driver.driverId}}.png" />
         <img ng-show="driver" src="img/flags/{{driver.Driver.nationality}}.png" /><br/>
         {{driver.Driver.givenName}} {{driver.Driver.familyName}}
