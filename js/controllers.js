@@ -3,7 +3,7 @@
 
 angular.module('F1FeederApp.controllers', []).
 
-  /* Drivers controller */
+  /* Drivers controller. Loading Drivers from service*/
   controller('driversController', function($scope, ergastAPIservice) {
     $scope.nameFilter = null;
     $scope.driversList = [];
@@ -16,7 +16,7 @@ angular.module('F1FeederApp.controllers', []).
         //Digging into the response to get the relevant data
         $scope.driversList = response.MRData.StandingsTable.StandingsLists[0].DriverStandings;
     });
-  }).
+  })
 
   /* Driver controller */
   controller('driverController', function($scope, $routeParams, ergastAPIservice) {
