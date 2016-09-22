@@ -12,9 +12,10 @@ angular.module('F1FeederApp.services', [])
   .factory('ergastAPIservice', function($http) {
 
     var ergastAPI = {};
-
+    /* $http is another service that facilitates communication with a remote http servers. Based on the deferred/promise APIS*/
     ergastAPI.getDrivers = function() {
       return $http({
+        /*you can choose between GET, JSONP, POST*/
         method: 'JSONP', 
         url: 'http://ergast.com/api/f1/2013/driverStandings.json?callback=JSON_CALLBACK'
       });

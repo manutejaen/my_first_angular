@@ -8,26 +8,10 @@
 
   <!-- It is common in html app place the scripts at the of the body, because modules can be only compiled after the angular librery is loaded.--> 
   <!--It is not quite common to use ng-init to initialize the data, instead it is high recommended to use controllers.-->
- <body ng-app="F1FeederApp" ng-controller="driversController">
+ <body ng-app="F1FeederApp">
   <ng-view></ng-view>
-  <input type="text" ng-model="nameFilter" placeholder="Search..."/>
-  <table>
-    <thead>
-      <tr><th colspan="4">Drivers Championship Standings</th></tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="driver in driversList | filter: searchFilter">
-        <td>{{$index + 1}}</td>
-        <td>
-          <img src="img/flags/{{driver.Driver.nationality}}.png" />
-          {{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
-        </td>
-        <td>{{driver.Constructors[0].name}}</td>
-        <td>{{driver.points}}</td>
-      </tr>
-    </tbody>
-  </table>
   
+
   <script src="bower_components/angular.min.js"></script>
   <script src="bower_components/angular-route.js"></script>
   <script src="js/app.js"></script>
